@@ -1,0 +1,164 @@
+/* Background and Font Style */
+.money-bg {
+    background-image: url('images/money-background.jpg'); /* Use a fun, engaging background */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling overflow */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(30, 30, 30, 0.9); /* Semi-transparent for effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-left {
+    font-size: 2em;
+    color: #FFD700; /* Gold */
+}
+
+.header-center a {
+    font-size: 1.2em;
+    color: #E5E5E5; /* Light text */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.header-center a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+.header-right .social-icon {
+    color: #FFD700;
+    margin: 0 10px;
+    font-size: 1.5em; /* Larger social icons */
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Full height minus header */
+    text-align: center;
+    color: #FFD700; /* Gold */
+}
+
+.hero-title {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    animation: fadeIn 2.5s ease-in-out;
+    margin-top: 10px;
+}
+
+/* Image section styling */
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-display {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.image-display img {
+    max-width: 400px; /* Adjust size for the main image */
+    height: auto;
+    border-radius: 20px; /* Rounded corners */
+    border: 5px solid #FFD700; /* Gold border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.image-display img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+.change-mask-btn {
+    background-color: #FFD700;
+    color: #1E1E1E;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.change-mask-btn:hover {
+    background-color: #D4AF37; /* Darker gold */
+}
+
+/* Image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Increased gap for spacing */
+    padding: 20px;
+}
+
+.grid-item {
+    border-radius: 8px; /* Rounded corners for grid items */
+    overflow: hidden; /* Hide overflow for images */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.grid-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Floating currency animation */
+.floating-currency {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.floating-currency::before {
+    content: "$";
+    position: absolute;
+    font-size: 3em;
+    color: rgba(255, 215, 0, 0.8); /* Gold */
+    animation: floatCurrency 15s infinite linear;
+}
+
+@keyframes floatCurrency {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
